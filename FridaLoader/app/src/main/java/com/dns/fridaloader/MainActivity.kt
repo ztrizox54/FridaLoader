@@ -238,11 +238,18 @@ class MainActivity : AppCompatActivity() {
         )
     }
 
-    private fun shell(cmd: String, readOutput: Boolean = true): String = try {
-        val p = Runtime.getRuntime().exec(cmd)
-        if (!readOutput) { p.waitFor(); return "" }
-        val out = p.inputStream.bufferedReader().readText()
-        p.waitFor()
-        out
-    } catch (_: Exception) { "" }
+    private fun shell(cmd: String, readOutput: Boolean = true): String {
+        return try {
+            val p = Runtime.getRuntime().exec(cmd)
+            if (!readOutput) {
+                p.waitFor()
+                return ""
+            }
+            val out = p.inputStream.bufferedReader().readText()
+            p.waitFor()
+            out
+        } catch (_: Exception) {
+            ""
+        }
+    }
 }

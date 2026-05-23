@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    compileSdk 35
+    compileSdk 34
     defaultConfig {
         applicationId "com.dns.fridaloader"
         minSdk 21
-        targetSdk 35
+        targetSdk 34
         versionCode 2
         versionName "2.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
@@ -35,7 +35,7 @@ dependencies {
     implementation 'com.google.android.material:material:1.11.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
     implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3'
-    implementation 'com.mindorks.android:prdownloader:0.6.0'
+    implementation 'com.github.MindorksOpenSource:PRDownloader:v0.6.0'
     implementation 'org.tukaani:xz:1.9'
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_loader"
+        android:icon="@drawable/ic_nav_loader"
+        android:title="Loader"
+        android:checked="true" />
+    <item
+        android:id="@+id/nav_server"
+        android:icon="@drawable/ic_nav_server"
+        android:title="Server" />
+</menu>

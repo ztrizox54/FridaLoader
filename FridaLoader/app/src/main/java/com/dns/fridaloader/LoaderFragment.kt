@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
+import com.downloader.Error as DownloadError
 import com.downloader.OnDownloadListener
 import com.downloader.PRDownloader
 import com.downloader.Status
@@ -203,7 +204,7 @@ class LoaderFragment : Fragment() {
                     }
                 }
 
-                override fun onError(error: Error) {
+                override fun onError(error: DownloadError) {
                     resetDownloadUi()
                     setStatus("Download failed", false)
                     tvProgress.text = error.connectionException?.message ?: "Unknown error"
